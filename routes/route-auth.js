@@ -7,9 +7,9 @@ const { Router } = require("express");
 const router = Router();
 
 /* controllers */
-const { crearUsuario, loginUsuario, revalidarToken } = require('../controllers/authController');
+const { crearUsuario, loginUsuario, revalidarToken } = require('../controllers/controller-auth');
 const { check } = require("express-validator");
-const { validarCampos } = require("../middlewares/validarCampos");
+const { validarCampos } = require("../middlewares/validar-campos");
 const { validarJWT } = require("../middlewares/validarJWT");
 
 

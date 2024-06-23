@@ -5,10 +5,10 @@ host + /api/events
 
 const { Router } = require("express");
 const { validarJWT } = require("../middlewares/validarJWT");
-const { getEventos, crearEvento, actualizarEvento, eliminarEvento } = require("../controllers/eventsController");
+const { getEventos, crearEvento, actualizarEvento, eliminarEvento } = require("../controllers/controller-events");
 const { check } = require("express-validator");
-const { validarCampos } = require("../middlewares/validarCampos");
-const { isDate } = require("../helpers/isDate");
+const { validarCampos } = require("../middlewares/validar-campos");
+const { isDate } = require("../helpers/is-date");
 
 
 const router = Router();

@@ -20,8 +20,8 @@ app.use(express.static('public'))
 app.use(express.json())
 
 /* Rutas */
-app.use('/api/auth', require('./routes/authRoute'))
-app.use('/api/events', require('./routes/eventsRoute'))
+app.use('/api/auth', require('./routes/route-auth'))
+app.use('/api/events', require('./routes/route-events'))
 
 /* Escuchar peticiones */
 app.listen(process.env.PORT, () => {
