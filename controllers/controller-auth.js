@@ -1,7 +1,7 @@
 const { response, json } = require('express');
 const { validationResult } = require('express-validator');
 var bcrypt = require('bcryptjs');
-const UsuarioModel = require('../models/UsuarioModel');
+const UsuarioModel = require('../models/model-usuario');
 const { generarJWT } = require('../helpers/jwt');
 
 const crearUsuario = async (req, res = response) => {

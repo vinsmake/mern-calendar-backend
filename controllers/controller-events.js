@@ -1,5 +1,5 @@
 const { response } = require("express");
-const Evento = require("../models/EventoModel");
+const Evento = require("../models/model-evento");
 
 const getEventos = async(req, res = response) => {
 
