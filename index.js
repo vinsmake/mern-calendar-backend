@@ -1,3 +1,6 @@
+/* route fix import */
+const path = require('path');
+
 /* Importar express */
 const express = require('express');
 const { dbConnection } = require('./database/config');
@@ -22,6 +25,11 @@ app.use(express.json())
 /* Rutas */
 app.use('/api/auth', require('./routes/route-auth'))
 app.use('/api/events', require('./routes/route-events'))
+
+/* route fix */
+app.use('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'))
+})
 
 /* Escuchar peticiones */
 app.listen(process.env.PORT, () => {
